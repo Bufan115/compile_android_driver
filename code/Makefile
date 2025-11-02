@@ -1,11 +1,11 @@
 obj-m += memory.o
-obj-m += process.o
-obj-m += entry.o
-# 内核构建目录（GitHub Actions 中会自动设置）
+#obj-m += process.o
+#obj-m += entry.o
+
 KDIR ?= /lib/modules/$(shell uname -r)/build
 
 all:
-	$(MAKE) -C $(KDIR) M=$(shell pwd) modules
+	$(MAKE) -C $(KDIR) M=$(PWD) modules
 
 clean:
-	$(MAKE) -C $(KDIR) M=$(shell pwd) clean
+	$(MAKE) -C $(KDIR) M=$(PWD) clean
