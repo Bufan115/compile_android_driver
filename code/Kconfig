@@ -1,0 +1,8 @@
+config KERNEL_HACK
+    tristate "Kernel Hack Driver"
+    default n
+    help
+      This is a kernel hack driver for memory operations.
+      
+      Say Y here if you want to enable the kernel hack driver.
+      If unsure, say N.
